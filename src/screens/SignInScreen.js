@@ -1,15 +1,19 @@
 import React from "react";
 import {StyleSheet, View} from "react-native";
 import {Text, Button, Input} from 'react-native-elements'
+import {useDispatch} from "react-redux";
+import {signIn} from '../store/actions/authActions'
 
 export default function SignInScreen({navigation}) {
+
+    const dispatch = useDispatch()
 
     const goToSignUp = () =>{
         navigation.navigate('signUp')
     }
 
-    const signIn = () =>{
-
+    const callSignIn = () =>{
+        dispatch(signIn)
     }
 
     return (
@@ -19,7 +23,7 @@ export default function SignInScreen({navigation}) {
             <Input placeholder={"Password"}/>
             <Button
                 title={"Sign in"}
-                onPress={signIn}
+                onPress={callSignIn}
             />
             <Button
                 title={"Sign up"}

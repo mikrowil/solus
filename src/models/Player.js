@@ -1,12 +1,10 @@
-export default class Player{
+import Entity from "./Entity";
 
-    /**
-     * Constructor for the player class.
-     * @param stats :Object
-     * @param inventory :Array
-     */
-    constructor(stats, inventory) {
-        this.stats = stats
-        this.inventory = inventory
+export default class Player extends Entity{
+    constructor() {
+        super(20, 2, 1);
+
     }
+
 }
+
