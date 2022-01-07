@@ -4,6 +4,11 @@ import {Button, Input, Text} from 'react-native-elements'
 import {signUp} from "../store/actions/authActions";
 import {useDispatch} from "react-redux";
 
+/**
+ * The sign up screen is used for creating a user from the provided username and password.
+ * @returns {JSX.Element}
+ * @constructor
+ */
 export default function SignUpScreen() {
 
     const [username, setUsername] = useState("")

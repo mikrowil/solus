@@ -4,6 +4,12 @@ const initState = {
     token:null,
 }
 
+/**
+ * Reducer for changing reduce authentication state variables.
+ * @param state
+ * @param action
+ * @returns {{token: null}|{token}}
+ */
 export const authReducer = (state = initState, action)=>{
     switch (action.type){
         case SIGN_UP:

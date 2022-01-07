@@ -1,3 +1,7 @@
+/**
+ * Base class for creating players and enemies. Possibly for allies in a future update.
+ * Contains methods that are shared among all entities within the game.
+ */
 export default class Entity{
     constructor(health=10, attack=1, defense=0) {
         this.health = health

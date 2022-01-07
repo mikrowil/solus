@@ -4,6 +4,12 @@ import {Text, Button, Input} from 'react-native-elements'
 import {useDispatch} from "react-redux";
 import {signIn} from '../store/actions/authActions'
 
+/**
+ * The sign in screen is where the user can authenticate themselves by providing a username and password.
+ * @param navigation
+ * @returns {JSX.Element}
+ * @constructor
+ */
 export default function SignInScreen({navigation}) {
 
     const dispatch = useDispatch()
@@ -12,6 +18,7 @@ export default function SignInScreen({navigation}) {
         navigation.navigate('signUp')
     }
 
+    //Calls the signIn action from authActions
     const callSignIn = () =>{
         dispatch(signIn)
     }
